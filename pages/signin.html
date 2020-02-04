@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cars.com</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="vincent-munene">
+	<meta name="description" content="HTML,CSS,JAVASCRIPT">
+	<meta http-equiv="refresh" content="">
+	
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.css">
+	<link rel="icon" type="image/gif" sizes="16x16" href="../images/general/favicon-16x16.png">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-6">
+				<form id="form1" name="myform" role="form" method="POST" onsubmit="return validate()">
+					<fieldset>
+						<legend>All fields with * are mandatory</legend>
+						<div class="form-group">
+							<label for="email/phone_number">e-mail or phone number *</label><br/>
+							<input class="form-control" type="text" name="email/phone_number" placeholder="enter e-mail or phone number">
+						</div>
+						<div class="form-group">
+							<label for="passwd">password *</label><br/>
+							<input class="form-control" type="text" name="passwd" placeholder="enter password">
+						</div><br/>
+						<div>
+							<button type="submit" class="btn btn-primary btn-sm">Sign in</button>
+							<button type="reset" onclick="myFunction()" class="btn btn-primary btn-sm">reset</button>
+						</div>
+					</fieldset>					
+				</form>
+			</div>
+			<script type="text/javascript">
+				function validate() {
+					var x=document.forms["myform"]["email"].value;
+					var x=document.forms["myform"]["passwd"].value;
+						if (x == null || x == "") {
+							display("Field can't be empty");
+							return false;
+						}
+				}
+				function myFunction() {
+					document.getElementById('form1').reset();
+				}
+			</script>
+		</div>	
+	</div>
+</body>
+</html>
